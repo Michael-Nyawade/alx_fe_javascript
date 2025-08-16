@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dynamic Quote Generator with Sync</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Quote Sync App</title>
 </head>
 <body>
-  <h1>Dynamic Quote Generator</h1>
+  <h1>Quote Sync App</h1>
 
-  <p id="quoteDisplay"></p>
+  <!-- Display Area -->
+  <div id="quoteDisplay">Loading quotes...</div>
 
-  <label for="categoryFilter">Filter by Category:</label>
-  <select id="categoryFilter" onchange="filterQuotes()"></select>
+  <!-- Notification Area -->
+  <div id="notification" style="display:none;"></div>
 
-  <h3>Add a Quote</h3>
-  <input type="text" id="newQuote" placeholder="Enter quote">
-  <input type="text" id="newCategory" placeholder="Enter category">
-  <button onclick="addQuote()">Add Quote</button>
-
-  <p id="notification" style="display:none; color:red;"></p>
+  <!-- Add Quote Form -->
+  <form id="addQuoteForm">
+    <input type="text" id="quoteInput" placeholder="Enter a new quote" required />
+    <button type="submit">Add Quote</button>
+  </form>
 
   <script src="script.js"></script>
 </body>
