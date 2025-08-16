@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quote Sync App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Quote Sync App</h1>
+  <div class="container">
+    <h1>Quote App</h1>
 
-  <!-- Display Area -->
-  <div id="quoteDisplay">Loading quotes...</div>
+    <!-- Quote Display Section -->
+    <div id="quoteDisplay">Your quotes will appear here...</div>
 
-  <!-- Notification Area -->
-  <div id="notification" style="display:none;"></div>
+    <!-- Add Quote Form -->
+    <form id="quoteForm">
+      <input type="text" id="newQuote" placeholder="Enter a new quote..." required>
+      <button type="submit">Add Quote</button>
+    </form>
 
-  <!-- Add Quote Form -->
-  <form id="addQuoteForm">
-    <input type="text" id="quoteInput" placeholder="Enter a new quote" required />
-    <button type="submit">Add Quote</button>
-  </form>
+    <!-- Show Notification -->
+    <div id="notification"></div>
+
+    <!-- Sync Button -->
+    <button id="syncButton">Sync Quotes</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
